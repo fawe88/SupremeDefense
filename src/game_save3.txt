@@ -2,6 +2,196 @@
     "asset_manager": {
         "assets": [
             {
+                "asset_id": "mover",
+                "components": [
+                    {
+                        "texts": [
+                            {
+                                "de": "Einfache Einheit",
+                                "key": "desc"
+                            },
+                            {
+                                "de": "Einheit",
+                                "key": "name"
+                            }
+                        ],
+                        "type": "text"
+                    },
+                    {
+                        "dummy_radius": 6.0,
+                        "shapes": [],
+                        "type": "collision"
+                    },
+                    {
+                        "VX": 0.0,
+                        "VY": 0.0,
+                        "goal_X": 0.0,
+                        "goal_Y": 0.0,
+                        "has_goal": false,
+                        "is_ground_based": true,
+                        "original_speed": 5.0,
+                        "speed": 0.0,
+                        "temp_goal_X": 0.0,
+                        "temp_goal_Y": 0.0,
+                        "type": "movement"
+                    },
+                    {
+                        "X": 0.0,
+                        "Y": 0.0,
+                        "type": "position"
+                    }
+                ]
+            },
+            {
+                "asset_id": "immovable",
+                "components": [
+                    {
+                        "dummy_radius": 16.0,
+                        "shapes": [
+                            {
+                                "height": 32.0,
+                                "offsetX": 0.0,
+                                "offsetY": 0.0,
+                                "shape_type": "rectangle",
+                                "width": 32.0
+                            }
+                        ],
+                        "type": "collision"
+                    },
+                    {
+                        "texts": [
+                            {
+                                "de": "Einfaches Gebaeude",
+                                "key": "desc"
+                            },
+                            {
+                                "de": "Gebaeude",
+                                "key": "name"
+                            }
+                        ],
+                        "type": "text"
+                    },
+                    {
+                        "marks_tiles_impassable": true,
+                        "marks_tiles_occupied": true,
+                        "placed_down": false,
+                        "requires_collision_check": false,
+                        "requires_tile_check": true,
+                        "type": "immovable"
+                    },
+                    {
+                        "X": 0.0,
+                        "Y": 0.0,
+                        "type": "position"
+                    }
+                ]
+            },
+            {
+                "asset_id": "test_command",
+                "components": [
+                    {
+                        "resources": [
+                            {
+                                "amount": 20,
+                                "id": "gold",
+                                "max_capacity": 0,
+                                "resource": "gold"
+                            },
+                            {
+                                "amount": 30,
+                                "id": "wood",
+                                "max_capacity": 0,
+                                "resource": "wood"
+                            }
+                        ],
+                        "type": "requirement"
+                    },
+                    {
+                        "texts": [
+                            {
+                                "de": "Testbefehl",
+                                "key": "desc"
+                            },
+                            {
+                                "de": "TestCom",
+                                "key": "name"
+                            }
+                        ],
+                        "type": "text"
+                    },
+                    {
+                        "to_build": "immovable",
+                        "type": "build_command"
+                    },
+                    {
+                        "type": "command"
+                    }
+                ]
+            },
+            {
+                "asset_id": "wood",
+                "components": [
+                    {
+                        "texts": [
+                            {
+                                "de": "Gehacktes Holz",
+                                "key": "desc"
+                            },
+                            {
+                                "de": "Holz",
+                                "key": "name"
+                            }
+                        ],
+                        "type": "text"
+                    },
+                    {
+                        "type": "resource_def"
+                    }
+                ]
+            },
+            {
+                "asset_id": "test_command2",
+                "components": [
+                    {
+                        "resources": [
+                            {
+                                "amount": 25,
+                                "id": "gold",
+                                "max_capacity": 0,
+                                "resource": "gold"
+                            },
+                            {
+                                "amount": 35,
+                                "id": "wood",
+                                "max_capacity": 0,
+                                "resource": "wood"
+                            }
+                        ],
+                        "type": "requirement"
+                    },
+                    {
+                        "texts": [
+                            {
+                                "de": "Testbefehl2",
+                                "key": "desc"
+                            },
+                            {
+                                "de": "TestCom2",
+                                "key": "name"
+                            }
+                        ],
+                        "type": "text"
+                    },
+                    {
+                        "to_build": "immovable2",
+                        "type": "build_command"
+                    },
+                    {
+                        "type": "command"
+                    }
+                ]
+            },
+            {
                 "asset_id": "immovable2",
                 "components": [
                     {
@@ -53,152 +243,6 @@
                 ]
             },
             {
-                "asset_id": "mover",
-                "components": [
-                    {
-                        "texts": [
-                            {
-                                "de": "Einfache Einheit",
-                                "key": "desc"
-                            },
-                            {
-                                "de": "Einheit",
-                                "key": "name"
-                            }
-                        ],
-                        "type": "text"
-                    },
-                    {
-                        "dummy_radius": 6.0,
-                        "shapes": [],
-                        "type": "collision"
-                    },
-                    {
-                        "VX": 0.0,
-                        "VY": 0.0,
-                        "goal_X": 0.0,
-                        "goal_Y": 0.0,
-                        "has_goal": false,
-                        "is_ground_based": true,
-                        "original_speed": 5.0,
-                        "speed": 0.0,
-                        "temp_goal_X": 0.0,
-                        "temp_goal_Y": 0.0,
-                        "type": "movement"
-                    },
-                    {
-                        "X": 0.0,
-                        "Y": 0.0,
-                        "type": "position"
-                    }
-                ]
-            },
-            {
-                "asset_id": "test_command2",
-                "components": [
-                    {
-                        "texts": [
-                            {
-                                "de": "Testbefehl2",
-                                "key": "desc"
-                            },
-                            {
-                                "de": "TestCom2",
-                                "key": "name"
-                            }
-                        ],
-                        "type": "text"
-                    },
-                    {
-                        "to_build": "immovable2",
-                        "type": "build_command"
-                    },
-                    {
-                        "resources": [
-                            {
-                                "amount": 25,
-                                "id": "gold",
-                                "max_capacity": 0,
-                                "resource": "gold"
-                            },
-                            {
-                                "amount": 35,
-                                "id": "wood",
-                                "max_capacity": 0,
-                                "resource": "wood"
-                            }
-                        ],
-                        "type": "requirement"
-                    },
-                    {
-                        "type": "command"
-                    }
-                ]
-            },
-            {
-                "asset_id": "test_command",
-                "components": [
-                    {
-                        "texts": [
-                            {
-                                "de": "Testbefehl",
-                                "key": "desc"
-                            },
-                            {
-                                "de": "TestCom",
-                                "key": "name"
-                            }
-                        ],
-                        "type": "text"
-                    },
-                    {
-                        "to_build": "immovable",
-                        "type": "build_command"
-                    },
-                    {
-                        "resources": [
-                            {
-                                "amount": 20,
-                                "id": "gold",
-                                "max_capacity": 0,
-                                "resource": "gold"
-                            },
-                            {
-                                "amount": 30,
-                                "id": "wood",
-                                "max_capacity": 0,
-                                "resource": "wood"
-                            }
-                        ],
-                        "type": "requirement"
-                    },
-                    {
-                        "type": "command"
-                    }
-                ]
-            },
-            {
-                "asset_id": "wood",
-                "components": [
-                    {
-                        "texts": [
-                            {
-                                "de": "Gehacktes Holz",
-                                "key": "desc"
-                            },
-                            {
-                                "de": "Holz",
-                                "key": "name"
-                            }
-                        ],
-                        "type": "text"
-                    },
-                    {
-                        "type": "resource_def"
-                    }
-                ]
-            },
-            {
                 "asset_id": "test_map",
                 "components": [
                     {
@@ -245,50 +289,6 @@
                     },
                     {
                         "type": "resource_def"
-                    }
-                ]
-            },
-            {
-                "asset_id": "immovable",
-                "components": [
-                    {
-                        "dummy_radius": 16.0,
-                        "shapes": [
-                            {
-                                "height": 32.0,
-                                "offsetX": 0.0,
-                                "offsetY": 0.0,
-                                "shape_type": "rectangle",
-                                "width": 32.0
-                            }
-                        ],
-                        "type": "collision"
-                    },
-                    {
-                        "texts": [
-                            {
-                                "de": "Einfaches Gebaeude",
-                                "key": "desc"
-                            },
-                            {
-                                "de": "Gebaeude",
-                                "key": "name"
-                            }
-                        ],
-                        "type": "text"
-                    },
-                    {
-                        "marks_tiles_impassable": true,
-                        "marks_tiles_occupied": true,
-                        "placed_down": false,
-                        "requires_collision_check": false,
-                        "requires_tile_check": true,
-                        "type": "immovable"
-                    },
-                    {
-                        "X": 0.0,
-                        "Y": 0.0,
-                        "type": "position"
                     }
                 ]
             },
